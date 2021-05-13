@@ -13,12 +13,6 @@ const SummaryForm = () => {
     </Popover>
   );
 
-  const popover_ = (
-    <Popover id="popover-basic">
-      <Popover.Content>Order Confirmed</Popover.Content>
-    </Popover>
-  );
-
   const checkboxLabel = (
     <span>
       I agree to
