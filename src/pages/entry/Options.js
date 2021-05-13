@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ScoopOptions from "./ScoopOptions";
+import ToppingOptions from "./ToppingOptions"
 import Row from "react-bootstrap/Row";
 
 const Options = ({ optionType }) => {
@@ -16,7 +17,7 @@ const Options = ({ optionType }) => {
       });
   }, [optionType]);
 
-  const ItemComponent = optionType === "scoops" ? ScoopOptions : null;
+  const ItemComponent = optionType === "scoops" ? ScoopOptions : ToppingOptions
 
   const optionItems = items.map((item) => (
     <ItemComponent
