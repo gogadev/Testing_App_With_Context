@@ -1,4 +1,8 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import {
+  render,
+  screen,
+  waitFor,
+} from "../../../test-utils/testing-library-utils";
 import OrderEntry from "../OrderEntry";
 import { rest } from "msw";
 import { server } from "../../../mocks/server";
@@ -14,6 +18,8 @@ test("handles error for scoops and toppings routes", async () => {
   );
 
   render(<OrderEntry />);
+
+  // wait for tests where await findBy is not enough
 
   await waitFor(async () => {
     const alerts = await screen.findAllByRole("alert");

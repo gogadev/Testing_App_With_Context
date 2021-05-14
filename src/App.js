@@ -1,18 +1,24 @@
-import React from 'react'
+import React from "react";
 
-import SummaryForm from './pages/summary/SummaryForm'
-import Options from './pages/entry/Options'
+import SummaryForm from "./pages/summary/SummaryForm";
+import Options from "./pages/entry/Options";
+import OrderEntry from "./pages/entry/OrderEntry";
 
-import "./App.css"
+import Container from "react-bootstrap/Container";
+
+import { OrderDetailsProvider } from "./context/OrderDetails";
+
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
-      <SummaryForm />
-      <Options />
-    </div>
-  )
-}
+    <Container>
+      <OrderDetailsProvider>
+        <OrderEntry />
+        <Options />
+      </OrderDetailsProvider>
+    </Container>
+  );
+};
 
-export default App
-
+export default App;
