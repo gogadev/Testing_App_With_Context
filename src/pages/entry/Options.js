@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import AlertBanner from "../common/AlertBanner";
 import { pricePerItem } from "../../constants";
 import { useOrderDetails } from "../../context/OrderDetails";
-import { formatCurrency } from "../../context/OrderDetails";
+import { formatCurrency } from "../../utilities";
 
 const Options = ({ optionType }) => {
   const [items, setItems] = useState([]);
